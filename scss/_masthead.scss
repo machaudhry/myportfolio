@@ -1,44 +1,44 @@
-// Styling for the masthead
-header.masthead {
-  padding-top: 100px;
-  padding-bottom: 50px;
-
-  text-align: center;
-
-  color: white;
-  background: $theme-success;
-  img {
-    display: block;
-
-    margin: 0 auto 20px;
+.masthead {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, #{fade-out($black, .9)} 0%,#{fade-out($black, .5)} 75%,$black 100%), url('../img/bg-masthead.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  h1 {
+    font-family: 'Varela Round';
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.8rem;
+    background: -webkit-linear-gradient(fade-out(white, 0.1), fade-out(white, 1));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
   }
-  .intro-text {
-    .name {
-      font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 2em;
-      font-weight: 700;
-
-      display: block;
-
-      text-transform: uppercase;
-    }
-    .skills {
-      font-size: 1.25em;
-      font-weight: 300;
+  h2 {
+    max-width: 20rem;
+    font-size: 1rem;
+  }
+  @media(min-width: 768px) {
+    h1 {
+      font-size: 4rem;
+      line-height: 4rem;
     }
   }
-}
-@media(min-width:768px) {
-  header.masthead {
-    padding-top: 200px;
-    padding-bottom: 100px;
-    .intro-text {
-      .name {
-        font-size: 4.75em;
-      }
-      .skills {
-        font-size: 1.75em;
-      }
+  @media(min-width: 992px) {
+    height: 100vh;
+    padding: 0;
+    h1 {
+      font-size: 6.5rem;
+      line-height: 6.5rem;
+      letter-spacing: 0.8rem;
+    }
+    h2 {
+      max-width: 30rem;
+      font-size: 1.25rem;
     }
   }
 }
